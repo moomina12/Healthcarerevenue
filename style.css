@@ -1,0 +1,75 @@
+/* Reset and base */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #000;
+  overflow: hidden;
+}
+
+video#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay content */
+.overlay-content {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #f3d9ff;
+  transition: all 0.6s ease;
+}
+
+#services h2, #contact h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #cc99ff;
+  transition: all 0.3s ease-in-out;
+}
+
+ul li strong {
+  color: #fff8dc;
+}
+
+a {
+  color: #99e6ff;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
