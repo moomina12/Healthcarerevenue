@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our – Services</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="newnewnewRevenue.mp4" type="video/mp4">
+    <track src="video/captions.vtt" kind="subtitles" srclang="en" label="English" default>
+    Your browser does not support background video.
+  </video>
+
+  <!-- Main Content -->
+  <div class="overlay-content">
+    <header>
+      <h1 id="dynamic-heading">Welcome</h1>
+      <p>We help uncover insights that drive smarter decisions and strategic growth.</p>
+    </header>
+
+    <section id="services">
+      <h2>We Provide: Services</h2>
+      <ul>
+        <li id="service-caption">
+          <strong>HealthCare Revenue Optimization</strong> – We help healthcare providers optimize billing and improve cash flow.
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>📧 <a href="mailto:moomina12@yahoo.com">moomina12@yahoo.com</a></p>
+    </section>
+
+    <footer>
+      <p>© 2025 Moomina Sereefa</p>
+    </footer>
+  </div>
+
+  <!-- Caption Sync Script -->
+  <script>
+    const captions = [
+      { time: 0, heading: "Welcome! I provide expert Business Analysis services.", service: "" },
+      { time: 4, heading: "Optimizing Healthcare Revenue", service: "We reduce denials and boost revenue for providers." },
+      { time: 9, heading: "Smarter Systems. Better Care.", service: "Using business insights to transform health services." },
+      { time: 14, heading: "Business Analysis Beyond Healthcare", service: "Serving retail, technology, finance, and more." },
+      { time: 19, heading: "Insights into Action", service: "We bridge data with decision-making for real results." },
+      { time: 25, heading: "Let’s Drive Growth Together", service: "Data-led strategies to grow your business." }
+    ];
+
+    const video = document.getElementById("bg-video");
+    const headingEl = document.getElementById("dynamic-heading");
+    const serviceEl = document.getElementById("service-caption");
+
+    let currentIndex = 0;
+
+    video.addEventListener("timeupdate", () => {
+      if (currentIndex < captions.length && video.currentTime >= captions[currentIndex].time) {
+        headingEl.textContent = captions[currentIndex].heading;
+        if (captions[currentIndex].service) {
+          serviceEl.innerHTML = `<strong>Service Highlight</strong> – ${captions[currentIndex].service}`;
+        }
+        currentIndex++;
+      }
+    });
+  </script>
+</body>
+</html>
