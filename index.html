@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our – Services</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="video/newnewnewRevenue.mp4" type="video/mp4">
+    Your browser does not support background video.
+  </video>
+
+  <!-- Custom Side Caption -->
+  <div id="side-caption">Loading...</div>
+
+  <!-- Main Content -->
+  <div class="overlay-content">
+    <header>
+      <h1>Welcome</h1>
+      <p>We help uncover insights that drive smarter decisions and strategic growth.</p>
+    </header>
+
+    <section id="services">
+      <h2>We Provide: Services</h2>
+      <ul>
+        <li><strong>HealthCare Revenue Optimization</strong> – We help healthcare providers optimize billing, reduce denials, and improve cash flow. Smarter systems. Fewer claim rejections. More revenue.</li>
+        <li><strong>Healthcare Business Analysis</strong> – Analyzing workflows, identifying gaps, and driving smarter healthcare solutions. Supporting better care and efficient operations through analytics and process improvement.</li>
+        <li><strong>Business Analysis on all Business Domains</strong> – Connecting data, people, and goals to solve complex business challenges.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>📧 <a href="mailto:moomina12@yahoo.com">moomina12@yahoo.com</a></p>
+    </section>
+
+    <footer>
+      <p>© 2025 Moomina Sereefa</p>
+    </footer>
+  </div>
+
+  <!-- Caption Sync Script -->
+  <script>
+    const captions = [
+      { time: 0, text: "Welcome! I provide expert Business Analysis services." },
+      { time: 4, text: "We optimize healthcare revenue and reduce claim denials." },
+      { time: 9, text: "Smarter systems. More revenue. Better care." },
+      { time: 14, text: "Business Analysis for all industries, not just healthcare." },
+      { time: 19, text: "Turn insights into action across retail, tech, and finance." },
+      { time: 25, text: "Let’s drive growth with data-driven strategy." }
+    ];
+
+    const captionBox = document.getElementById("side-caption");
+    const video = document.getElementById("bg-video");
+
+    video.addEventListener("timeupdate", () => {
+      const currentTime = video.currentTime;
+      const caption = captions.find((cap, i) => {
+        const nextTime = captions[i + 1]?.time || Infinity;
+        return currentTime >= cap.time && currentTime < nextTime;
+      });
+      captionBox.textContent = caption ? caption.text : "";
+    });
+  </script>
+
+</body>
+</html>
