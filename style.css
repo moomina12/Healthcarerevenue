@@ -1,0 +1,58 @@
+/* Background Video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay Text & Content */
+.overlay-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 60px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+/* Side Caption Styling */
+#side-caption {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 280px;
+  z-index: 2;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
